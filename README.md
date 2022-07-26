@@ -12,4 +12,10 @@ Build inclusion proof for specified element；
 Build exclusion proof for specified element】
 6. 优化SM4（使用各种方法）
 7. Project: report on the application of this deduce technique in Ethereum with ECDSA
+8. Project: impl sm2 with RFC6979（产生k的过程使用RFC6979，不是随机产生，而是伪随机产生）
+9. Project: verify the above pitfalls with proof-of-concept code
+10. Project: Implement the above ECMH scheme
+11. Project: Implement a PGP scheme with SM2
+12. Project: implement sm2 2P sign with real network communication
+13. Project: PoC impl of the scheme, or do implement analysis by Google
 
