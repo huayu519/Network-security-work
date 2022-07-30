@@ -1,23 +1,29 @@
-# Network-security-work
-网安19级创新创业实践课程项目作业说明
+# README
 
-## 本项目主要包括以下几个project：
-1. Project1：implement the naïve birthday attack of reduced SM3（SM3的16-bit生日碰撞攻击）
-2. Project2：implement the Rho method of reduced SM3（Rho方法的SM3的16-bit碰撞攻击）
-3. Project: implement length extension attack for SM3, SHA256, etc.
-4. Project: do your best to optimize SM3 implementation (software)
-5. Project: Impl Merkle Tree following RFC6962
-【Construct a Merkle tree with 10w leaf nodes；
-Build inclusion proof for specified element；
-Build exclusion proof for specified element】
-6. 优化SM4（使用各种方法）
-7. Project: report on the application of this deduce technique in Ethereum with ECDSA
-8. Project: impl sm2 with RFC6979（产生k的过程使用RFC6979，不是随机产生，而是伪随机产生）
-9. Project: verify the above pitfalls with proof-of-concept code
-10. Project: Implement the above ECMH scheme
-11. Project: Implement a PGP scheme with SM2
-12. Project: implement sm2 2P sign with real network communication
-13. Project: PoC impl of the scheme, or do implement analysis by Google
-14. Project: forge a signature to pretend that you are Satoshi
-15. Project: research report on MPT
+## Part1
 
+小组成员：赵华雨（201900460006)【git账户名称：huayu519】
+
+## Part2
+
+项目简介：共实现了四个项目
+
+| 项目名称                                         | 完成人             |
+| ------------------------------------------------ | ------------------ |
+| Project1-birthday_attack_of_SM3                  | 赵华雨（huayu519） |
+| Project2-Rho_method_birthday_attack_of_SM3       | 赵华雨（huayu519） |
+| Project3-Implement_Merkle_Tree_following_RFC6962 | 赵华雨（huayu519） |
+| Project4- Implement_PGP_with_SM2                 | 赵华雨（huayu519） |
+
+## Part3
+
+清单
+
+|              |                                                              |
+| ------------ | ------------------------------------------------------------ |
+| 已完成的项目 | Project：implement the naïve birthday attack of reduced SM3<br/>Project：implement the Rho method of reduced SM3<br/>Project: Impl Merkle Tree following RFC6962<br/>Project: Implement a PGP scheme with SM2 |
+| 未完成的项目 | Project: implement length extension attack for SM3, SHA256, etc.<br/>Project: do your best to optimize SM3 implementation (software)<br/>优化SM4（使用各种方法）<br/>Project: report on the application of this deduce technique in Ethereum with ECDSA<br/>Project: impl sm2 with RFC6979<br/>Project: verify the above pitfalls with proof-of-concept code<br/>Project: Implement the above ECMH scheme<br/>Project: implement sm2 2P sign with real network communication<br/>Project: PoC impl of the scheme, or do implement analysis by Google<br/>Project: forge a signature to pretend that you are Satoshi<br/>Project: research report on MPT |
+
+## Part4 
+
+具体的代码说明在每个项目文件夹的README文件里
