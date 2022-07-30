@@ -10,7 +10,7 @@
 * 初始化算法
 
 ```c++
- 	unsigned char sm3_value[EVP_MAX_MD_SIZE];   //保存输出的摘要值的数组
+    unsigned char sm3_value[EVP_MAX_MD_SIZE];   //保存输出的摘要值的数组
     unsigned int sm3_len;
     EVP_MD_CTX* sm3ctx;                         //EVP消息摘要结构体
     sm3ctx = EVP_MD_CTX_new();//调用函数初始化
@@ -22,7 +22,7 @@
 * 调用摘要算法
 
 ```c++
-	EVP_DigestUpdate(sm3ctx, c, strlen(c));//调用摘要UpDate计算msg1的摘要
+    EVP_DigestUpdate(sm3ctx, c, strlen(c));//调用摘要UpDate计算msg1的摘要
     EVP_DigestFinal_ex(sm3ctx, sm3_value, &sm3_len);//摘要结束，输出摘要值  
 ```
 
@@ -31,7 +31,7 @@
 * 使用bitset进行遍历
 
 ```c++
-		bitset<16> a(i); //存储16进制消息
+	bitset<16> a(i); //存储16进制消息
         string b = a.to_string();//将消息转换成string
         const char* c = b.data();//将string转换成const char*
 ```
@@ -39,7 +39,7 @@
 * 使用map容器匹配碰撞
 
 ```c++
-		string result;
+	string result;
     	char new_sm3_value[8];
     	sprintf_s(new_sm3_value, "%x%x", sm3_value[0], sm3_value[1]);
         result = new_sm3_value;//强制将char*转换乘string
