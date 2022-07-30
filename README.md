@@ -16,13 +16,13 @@
 | Project4- Implement_PGP_with_SM2                 | 赵华雨（huayu519） |
 
 ## Part3
-
 清单
 
 |              |                                                              |
 | ------------ | ------------------------------------------------------------ |
 | 已完成的项目 | Project：implement the naïve birthday attack of reduced SM3<br/>Project：implement the Rho method of reduced SM3<br/>Project: Impl Merkle Tree following RFC6962<br/>Project: Implement a PGP scheme with SM2 |
 | 未完成的项目 | Project: implement length extension attack for SM3, SHA256, etc.<br/>Project: do your best to optimize SM3 implementation (software)<br/>优化SM4（使用各种方法）<br/>Project: report on the application of this deduce technique in Ethereum with ECDSA<br/>Project: impl sm2 with RFC6979<br/>Project: verify the above pitfalls with proof-of-concept code<br/>Project: Implement the above ECMH scheme<br/>Project: implement sm2 2P sign with real network communication<br/>Project: PoC impl of the scheme, or do implement analysis by Google<br/>Project: forge a signature to pretend that you are Satoshi<br/>Project: research report on MPT |
+| 有问题的项目 | Project: Impl Merkle Tree following RFC6962——只实现了Merkle Tree，但是并没有对存在和不存在进行证明 |
 
 ## Part4 
 
