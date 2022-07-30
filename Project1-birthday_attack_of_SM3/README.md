@@ -45,6 +45,20 @@
         result = new_sm3_value;//强制将char*转换乘string
 
         map<string, int>::iterator iter = hashMap.find(result);
+	if (hashMap.end() == iter) {
+            hashMap[result] = i;
+        }
+        else {
+            QueryPerformanceCounter(&nEndTime);//停止计时  
+            bitset<16> temp1(iter->second);
+            bitset<16> temp2(i);
+            string str_1 = temp1.to_string();
+            string str_2 = temp2.to_string();
+            cout << "找到的一组16-bit碰撞： " << str_1 << " and " << str_2 << endl;
+            EVP_MD_CTX_reset(sm3ctx);                       //释放内存
+            break; //跳出循环
+        }
+        i++;
 ```
 
 
