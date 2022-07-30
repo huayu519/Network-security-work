@@ -197,7 +197,7 @@ MerkleTree* Creat_Merkle_Tree(MerkleTree* mt, int* arr, int nums, int tree_depth
 		return mt;
 	}
 	else {
-		printf("叶子节点 [%d] arr=%d, nums=%d, tree_depth=%d\n", __LINE__, *arr, nums, tree_depth);
+		
 		// 每次添加一个叶子节点，优先左树，其次右树
 		// 创建一个树结点 
 		New_Merkle_Node(node, 0);
@@ -213,7 +213,7 @@ MerkleTree* Creat_Merkle_Tree(MerkleTree* mt, int* arr, int nums, int tree_depth
 			tree_depth++;
 
 			// 递归
-			printf("新头结点 [%d] tree_depth=%d, mt->hash_num=%d\n", __LINE__, tree_depth, mt->hash_num);
+			
 			mt = Creat_Merkle_Tree(mt, arr + 1, nums - 1, tree_depth);
 		}
 		// 如果 mt 不为空,mt为头结点 
@@ -238,7 +238,7 @@ MerkleTree* Creat_Merkle_Tree(MerkleTree* mt, int* arr, int nums, int tree_depth
 					tmp->parent = p;
 
 					p = p->right;
-					printf("插入结点 [%d] tree_depth=%d, hash_num=%d\n", __LINE__, tree_depth, p->hash_num);
+					
 
 					i--;
 					// 根据树的深度创建同样深度的左树 
@@ -279,7 +279,7 @@ MerkleTree* Creat_Merkle_Tree(MerkleTree* mt, int* arr, int nums, int tree_depth
 
 				i--;
 				p = mt->right;
-				printf("插入结点 [%d] tree_depth=%d, hash_num=%d\n", __LINE__, tree_depth, p->hash_num);
+				
 
 				// 根据树的深度创建同样深度的左树 
 				while (i > 0) {
