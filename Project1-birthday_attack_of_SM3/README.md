@@ -58,11 +58,12 @@
 1. 在visual studio  Debug x64模式下运行
 2. 运行之前先配置openssl项目属性
 
-![image-20220730111751368](README.assets/image-20220730111751368.png)
+![image-20220730111751368](https://github.com/huayu519/Network-security-work/blob/main/images/image-20220730111751368.png)
 
 
 
-![image-20220730111819100](README.assets/image-20220730111819100.png)
+
+![image-20220730111819100](https://github.com/huayu519/Network-security-work/blob/main/images/image-20220730111819100.png)
 
 3. 正常调试运行代码即可
 
@@ -70,7 +71,7 @@
 
 运行全过程截图：找到一组16-bit碰撞
 
-![image-20220730111917628](README.assets/image-20220730111917628.png)
+![image-20220730111917628](https://github.com/huayu519/Network-security-work/blob/main/images/image-20220730111917628.png)
 
 
 
