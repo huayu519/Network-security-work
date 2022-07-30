@@ -29,19 +29,17 @@ typedef struct MerkleTreeNode {
 	mt->data = 0;	\
 	mt->hash;    \
 	}
-void tDigest(char msg1[], MerkleTree* mt)
+void tDigest(char msg[], MerkleTree* mt)
 {
 	unsigned char sm3_value[EVP_MAX_MD_SIZE];   //保存输出的摘要值的数组
 	unsigned int sm3_len, i;
 	EVP_MD_CTX* sm3ctx;                         //EVP消息摘要结构体
 	sm3ctx = EVP_MD_CTX_new();//调用函数初始化
-	//char msg1[] = "20191226";              //待计算摘要的消息1
-	//char msg2[] = "liuxuanhe";              //待计算摘要的消息2
-
+	
 	EVP_MD_CTX_init(sm3ctx);                    //初始化摘要结构体
 	EVP_DigestInit_ex(sm3ctx, EVP_sm3(), NULL); //设置摘要算法和密码算法引擎，这里密码算法使用sm3，算法引擎使用OpenSSL默认引擎即软算法
-	EVP_DigestUpdate(sm3ctx, msg1, strlen(msg1));//调用摘要UpDate计算msg1的摘要
-	//EVP_DigestUpdate(sm3ctx, msg2, strlen(msg2));//调用摘要UpDate计算msg2的摘要 
+	EVP_DigestUpdate(sm3ctx, msg, strlen(msg));//调用摘要UpDate计算msg的摘要
+
 	EVP_DigestFinal_ex(sm3ctx, sm3_value, &sm3_len);//摘要结束，输出摘要值   
 	EVP_MD_CTX_reset(sm3ctx);                       //释放内存
 	char hash_1[65];
@@ -99,7 +97,7 @@ void Print_Merkle_Tree(MerkleTree* mt, int high)
 }
 
 
-// 计算根节点的hash值// hash（0x00||m)
+// 计算叶子节点的hash值—— hash（0x00||m)
 void hash_int(int num, MerkleTree* mt) {
 	char temp_1[2];
 	sprintf_s(temp_1, "%x", num);
@@ -109,7 +107,7 @@ void hash_int(int num, MerkleTree* mt) {
 
 }
 
-// hash（0x01||h1||h2)
+//计算内部节点的hash值—— hash（0x01||h1||h2)
 void hash_uint(MerkleTree* Left,MerkleTree* Right, MerkleTree* mt) {
 	if (Right == NULL)
 	{
@@ -310,5 +308,5 @@ int main(void)
 	int array[] = { 0, 1, 2, 3 ,4 ,5 ,6, 7};
 	MerkleTree* mt = NULL;
 	mt = Creat_Merkle_Tree(mt, array, sizeof(array) / sizeof(int), 0);
-  return 0;
+  	return 0;
 }
